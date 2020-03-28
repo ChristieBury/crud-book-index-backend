@@ -30,7 +30,7 @@ def home():
 
 #filling the slots/rows in the table
 @app.route('/book/input', methods=['POST'])
-def books_imput():
+def books_input():
     if request.content_type == 'application/json':
         post_data = request.get_json()
         title = post_data.get('title')
