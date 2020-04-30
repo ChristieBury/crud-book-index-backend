@@ -55,12 +55,12 @@ def return_single_books(id):
 #the D in the CRUD
 @app.route('/delete/<id>', methods = ['DELETE'])
 def book_delete(id):
-    if request.content_type == 'application/json':
+    # if request.content_type == 'application/json':
         record = db.session.query(Book).get(id)
         db.session.delete(record)
         db.session.commit()
         return jsonify('completed Delete action')
-    return jsonify('Delete failed')
+    # return jsonify('Delete failed')
 
     #update in CRUD
 @app.route('/update_book/<id>', methods = ['PUT'])
